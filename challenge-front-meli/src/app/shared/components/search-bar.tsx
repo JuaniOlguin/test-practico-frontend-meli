@@ -1,5 +1,8 @@
-import Image from "next/image";
+'use client'
+
+import { useRouter } from "next/navigation";
 import LogoMeli from "./logo-meli";
+import { useState } from "react";
 
 function SearchIcon(){
   return(
@@ -10,18 +13,41 @@ function SearchIcon(){
 }
 
 export default function SearchBar() {
+
+  const router = useRouter()
+
+  const [formData, setFormData] = useState({
+    search: '',
+  });
+
+  const handleInputChange = (event: any) => {
+    setFormData({
+      search: event.target.value
+    });    
+  };
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    router.push(`items?search=${formData.search}`)
+  };
+
   return (
     <div className="search-bar">
-      <div className="me-3">
-        <LogoMeli />
-      </div>
-      <input
-        type="text" 
-        placeholder="Nunca dejes de buscar"
-      />
-      <button type="submit">
-        <SearchIcon />
-      </button>
+      
+      <form onSubmit={handleSubmit} className="d-flex align-items-center">
+        <div className="me-3">
+          <LogoMeli />
+        </div>
+        <input
+          type="text" 
+          placeholder="Nunca dejes de buscar"
+          onChange={handleInputChange}
+        />
+        <button type="submit">
+          <SearchIcon />
+        </button>
+      </form>
+
     </div>
   )
 }

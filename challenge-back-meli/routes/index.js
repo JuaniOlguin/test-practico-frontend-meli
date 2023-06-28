@@ -7,7 +7,7 @@ router.get('/api/items', (req, res) => {
     const limit = req.query.limit
     axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
     .then(function (response) {
-      console.log(response.data.filters[0].values[0].path_from_root);
+      
       const items = response.data.results.splice(0, limit);
       const categories = [];
       response.data.filters.find(filter => filter.id == 'category').values.forEach(category => {
@@ -37,9 +37,12 @@ router.get('/api/items', (req, res) => {
         })
       }
       res.send(data);
+
     })
     .catch(function (error) {
-      res.send(error)
+
+      res.status(400).send(error)
+
     })
     .finally(function () {
       // always executed
