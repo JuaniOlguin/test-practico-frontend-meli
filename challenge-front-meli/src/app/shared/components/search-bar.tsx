@@ -32,22 +32,26 @@ export default function SearchBar() {
   };
   
   return (
-    <div className="search-bar">
-      
-      <form onSubmit={handleSubmit} className="d-flex align-items-center">
-        <div className="me-3">
-          <LogoMeli />
+    <div className="search-bar container-fluid">
+      <div className="row w-100 justify-content-center">
+        <div className="col-12 col-md-10">
+          <div className="d-flex w-100 justify-content-center">
+            <form onSubmit={handleSubmit} className="d-flex align-items-center w-100">
+              <div className="me-3">
+                <LogoMeli />
+              </div>
+              <input
+                type="text" 
+                placeholder="Nunca dejes de buscar"
+                onChange={handleInputChange}
+              />
+              <button type="submit">
+                <SearchIcon />
+              </button>
+            </form>
+          </div>
         </div>
-        <input
-          type="text" 
-          placeholder="Nunca dejes de buscar"
-          onChange={handleInputChange}
-        />
-        <button type="submit">
-          <SearchIcon />
-        </button>
-      </form>
-
+      </div>
     </div>
   )
 }

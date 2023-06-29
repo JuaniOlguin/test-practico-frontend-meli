@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 
+const path = require('path');
+
 const nextConfig = {
-    env: {
-        baseUrl: 'localhost:3001'
-    }
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
+    },
 }
 
 module.exports = nextConfig

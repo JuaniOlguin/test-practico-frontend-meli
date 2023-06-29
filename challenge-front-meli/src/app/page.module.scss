@@ -1,0 +1,32 @@
+// COLORS
+$color-yellow: #FFE600;
+$color-black: #333333;
+$color-grey-500: #666666;
+$color-grey-200: #999999;
+$color-grey-100: #EEEEEE;
+$color-white: #FFFFFF;
+
+//FONT SIZES
+$font-small: 12px;
+$font-medium: 14px;
+$font-large: 18px;
+$font-xlarge: 24px;
+
+//MISC
+$search-bar-height: 56px;
+
+:export{
+    colorYellow: $color-yellow;
+    colorBlack: $color-black;
+    colorGrey500: $color-grey-500;
+    colorGrey200: $color-grey-200;
+    colorGrey100: $color-grey-100;
+    colorWhite: $color-white;
+
+    fontSmall: $font-small;
+    fontMedium: $font-medium;
+    fontLarge: $font-large;
+    fontXLarge: $font-xlarge;
+
+    searchBarHeight: $search-bar-height;
+}

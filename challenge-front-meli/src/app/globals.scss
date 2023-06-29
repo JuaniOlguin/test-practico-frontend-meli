@@ -1,20 +1,4 @@
-// COLORS
-$color-yellow: #FFE600;
-$color-black: #333333;
-$color-grey-500: #666666;
-$color-grey-200: #999999;
-$color-grey-100: #EEEEEE;
-$color-white: #FFFFFF;
-
-//FONT SIZES
-$font-small: 12px;
-$font-medium: 14px;
-$font-large: 18px;
-$font-xlarge: 24px;
-
-//MISC
-$search-bar-height: 56px;
-
+@import './page.module.scss';
 
 body{
     margin: 0;
@@ -35,7 +19,8 @@ body{
         border-bottom-right-radius: 0px;
         min-width: 500px;
         padding: 10px;
-        font-size: $font-large
+        font-size: $font-large;
+        flex-grow: 1;
     }
     button{
         background-color: $color-grey-100;

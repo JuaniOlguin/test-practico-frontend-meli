@@ -9,7 +9,7 @@ router.get('/api/items', (req, res) => {
     .then(function (response) {
       const items = response.data.results.splice(0, limit);
       const categories = [];
-      if(response.data.filters){
+      if(response.data.filters.length > 0){
         response.data.filters.find(filter => filter.id == 'category').values.forEach(category => {
           category.path_from_root.forEach(path => {
             categories.push(path.name)
