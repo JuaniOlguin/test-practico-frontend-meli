@@ -30,7 +30,7 @@ export default function SearchBar() {
     event.preventDefault();
     router.push(`items?search=${formData.search}`)
   };
-
+  
   return (
     <div className="search-bar">
       

@@ -7,14 +7,15 @@ router.get('/api/items', (req, res) => {
     const limit = req.query.limit
     axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
     .then(function (response) {
-      
       const items = response.data.results.splice(0, limit);
       const categories = [];
-      response.data.filters.find(filter => filter.id == 'category').values.forEach(category => {
-        category.path_from_root.forEach(path => {
-          categories.push(path.name)
+      if(response.data.filters){
+        response.data.filters.find(filter => filter.id == 'category').values.forEach(category => {
+          category.path_from_root.forEach(path => {
+            categories.push(path.name)
+          });
         });
-      });
+      }
       const data = {
         author: {
           name: '',
@@ -40,7 +41,7 @@ router.get('/api/items', (req, res) => {
 
     })
     .catch(function (error) {
-
+      console.log(error);
       res.status(400).send(error)
 
     })

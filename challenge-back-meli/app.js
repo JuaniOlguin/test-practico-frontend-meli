@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 3001;
+const cors = require('cors');
+
+// enable cors
+app.use(cors());
 
 // middlewares
 app.use(express.urlencoded({extended: true}));
