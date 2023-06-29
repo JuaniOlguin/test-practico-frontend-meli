@@ -2,7 +2,33 @@
 
 body{
     margin: 0;
+    background-color: $color-grey-100;
 }
+
+h1{
+    font-size: $font-xlarge !important;
+}
+h2{
+    font-size: $font-large !important;
+}
+h3{
+    font-size: $font-medium !important;
+}
+h4{
+    font-size: $font-small !important;
+}
+hr{
+    border-top: 1px solid $color-grey-200;
+}
+.padding-y-small{
+    padding-top: $padding-small;
+    padding-bottom: $padding-small;
+}
+.padding-x-small{
+    padding-left: $padding-small;
+    padding-right: $padding-small;
+}
+
 .search-bar{
     display: flex;
     justify-content: center;

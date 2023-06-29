@@ -7,7 +7,7 @@ export default function SearchResultCategories(props: any){
             {
               props.categories.map((category: any, index: number) => (
                 <div key={category}>
-                  <p className="me-2 category">
+                  <p className="me-2 category mb-0">
                     {
                       category + ` ${index != props.categories.length - 1 ? ' > ' : ''}`
                     }

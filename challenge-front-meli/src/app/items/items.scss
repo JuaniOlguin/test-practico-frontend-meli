@@ -1,10 +1,28 @@
 @import '../page.module.scss';
 
-
 .categories-list{
     padding-top: 16px;
     padding-bottom: 16px;
 }
 .category{
     font-size: $font-medium;
+}
+.search-result-container{
+    background-color: $color-white;
+}
+.search-result{
+    display: flex;
+    flex-direction: column;
+}
+.search-result-item{
+    padding-top: $padding-small;
+    padding-bottom: $padding-small;
+    min-height: 180px;
+}
+.item-picture{
+    border-radius: 5px;
+    border: 1px solid $color-grey-100;
+}
+.item-title{
+    margin-top: $padding-big;
 }

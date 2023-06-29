@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation"
 import { SearchResult } from "../shared/models/item"
 import { useEffect, useState } from "react"
 import SearchResultCategories from "./components/search-result-categories"
+import SearchResultList from "./components/search-result-list"
 
 export default function Items() {
   
@@ -39,7 +40,12 @@ export default function Items() {
         <div className="col-12 col-md-10">
             {
               result &&
-              <SearchResultCategories categories={result?.categories} />
+              <>
+                <SearchResultCategories categories={result.categories} />
+                <div className="search-result-container">
+                  <SearchResultList list={result.items} />
+                </div>                
+              </>
             }  
         </div>
         <div className="col-0 col-md-1"></div>

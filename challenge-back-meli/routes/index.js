@@ -33,7 +33,8 @@ router.get('/api/items', (req, res) => {
             },
             picture: item.thumbnail,
             condition: item.condition,
-            free_shipping: item.shipping.free_shipping
+            free_shipping: item.shipping.free_shipping,
+            address: `${item.address.city_name}, ${item.address.state_name}`
           }
         })
       }
