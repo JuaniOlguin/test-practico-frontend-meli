@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.scss'
 import { Inter } from 'next/font/google'
-import SearchBar from './shared/components/search-bar'
+import SearchBar from './shared/components/SearchBar'
 
 const inter = Inter({ subsets: ['latin'] })
 

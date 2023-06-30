@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
-import LogoMeli from "./logo-meli";
+import LogoMeli from "./LogoMeli";
 import { useState } from "react";
 
 function SearchIcon(){

@@ -21,8 +21,32 @@
 }
 .item-picture{
     border-radius: 5px;
+    object-fit: contain;
+}
+.item-picture-wrapper{
     border: 1px solid $color-grey-100;
+    border-radius: 5px;
 }
 .item-title{
     margin-top: $padding-big;
+}
+.item-address{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: $color-black;
+}
+
+@media (max-width: 768px) {
+    .item-info{
+        margin-left: $padding-small;
+    }
+    .item-picture-wrapper{
+        display: flex;
+        justify-content: center;
+    }
 }

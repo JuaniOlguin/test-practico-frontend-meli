@@ -1,6 +1,6 @@
-import { ItemElement } from '@/app/shared/models/item';
+import { ItemElement } from '../../shared/models/item';
 import '../items.scss';
-import SearchResultItem from './search-result-item';
+import SearchResultItem from './SearchResultItem';
 
 export default function SearchResultList(props: any){
   
