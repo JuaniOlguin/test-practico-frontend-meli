@@ -53,38 +53,48 @@ router.get("/api/items/:id", (req, res) => {
 	const productId = req.params.id;
 
 	let description = "";
-
+  let categories = [];
 	axios
 		.get(`${process.env.ML_API_URL}/items/${productId}`)
 		.then((item) => {
-			axios
-				.get(`${process.env.ML_API_URL}/items/${productId}/description`)
-				.then((descr) => {
-					description = descr.data.plain_text;
-					const data = {
-						author: {
-							name: "",
-							lastname: "",
-						},
-						item: {
-							id: item.data.id,
-							title: item.data.title,
-							price: {
-								currency: item.data.currency_id,
-								amount: Math.floor(item.data.price),
-								decimals: Math.floor(item.data.price) - item.data.price,
-							},
-							picture: item.data.pictures[0].url,
-							condition: item.data.condition,
-							free_shipping: item.data.shipping.free_shipping,
-							sold_quantity: item.data.sold_quantity,
-							description: description,
-						},
-					};
-
-					res.send(data);
-				})
-				.catch((error) => {
+      console.log(item);
+      axios
+        .get(`${process.env.ML_API_URL}/categories/${item.data.category_id}`)
+        .then(category => {
+          categories = category.data.path_from_root.map(cat => cat.name);
+          axios
+            .get(`${process.env.ML_API_URL}/items/${productId}/description`)
+            .then((descr) => {
+              description = descr.data.plain_text;
+              const data = {
+                author: {
+                  name: "",
+                  lastname: "",
+                },
+                item: {
+                  id: item.data.id,
+                  title: item.data.title,
+                  price: {
+                    currency: item.data.currency_id,
+                    amount: Math.floor(item.data.price),
+                    decimals: Math.floor(item.data.price) - item.data.price,
+                  },
+                  picture: item.data.pictures[0].url,
+                  condition: item.data.condition,
+                  free_shipping: item.data.shipping.free_shipping,
+                  sold_quantity: item.data.sold_quantity,
+                  description: description,
+                  categories
+                },
+              };
+              res.send(data);
+            })
+            .catch((error) => {
+              console.log(error);
+              res.status(400).send(error);
+            });
+        })
+        .catch((error) => {
 					console.log(error);
 					res.status(400).send(error);
 				});

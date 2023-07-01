@@ -7,11 +7,12 @@ export default function SearchResultCategories(props: any){
             {
               props.categories.map((category: any, index: number) => (
                 <div key={category}>
-                  <p className="me-2 category mb-0">
-                    {
-                      category + ` ${index != props.categories.length - 1 ? ' > ' : ''}`
-                    }
-                  </p>
+                  {
+                    <p className="category mb-0 d-flex align-items-center text-center">
+                        {category}
+                        <span className='mx-2'>{index != props.categories.length - 1 ? '>' : ''}</span>
+                    </p>
+                  }
                 </div>
               ))
             }

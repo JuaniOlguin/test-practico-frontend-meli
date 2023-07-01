@@ -1,52 +1,85 @@
-@import '../page.module.scss';
+@import "../page.module.scss";
 
-.categories-list{
-    padding-top: 16px;
-    padding-bottom: 16px;
+// SEARCH RESULTS
+.categories-list {
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
-.category{
-    font-size: $font-medium;
+.category {
+	font-size: $font-medium;
 }
-.search-result-container{
-    background-color: $color-white;
+.search-result-container {
+	background-color: $color-white;
 }
-.search-result{
-    display: flex;
-    flex-direction: column;
+.search-result {
+	display: flex;
+	flex-direction: column;
 }
-.search-result-item{
-    padding-top: $padding-small;
-    padding-bottom: $padding-small;
-    min-height: 180px;
+.search-result-item {
+	padding-top: $padding-small;
+	padding-bottom: $padding-small;
+	min-height: 180px;
 }
-.item-picture{
-    border-radius: 5px;
-    object-fit: contain;
+.item-picture {
+	border-radius: 5px;
+	object-fit: contain;
+  max-width: 100%;
 }
-.item-picture-wrapper{
-    border: 1px solid $color-grey-100;
-    border-radius: 5px;
+.item-picture-wrapper {
+	border: 1px solid $color-grey-100;
+	border-radius: 5px;
 }
-.item-title{
-    margin-top: $padding-big;
+.item-title {
+	margin-top: $padding-big;
 }
-.item-address{
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
+.item-address {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    color: $color-black;
+a {
+	text-decoration: none;
+	color: $color-black;
+}
+
+// ITEM DETAIL
+.item-detail-info {
+  padding-top: $padding-big;
+  padding-right: $padding-big;
+}
+.item-price {
+  font-size: $font-xxxlarge !important;
+  font-weight: bold;
+  margin-top: $padding-big;
+  margin-bottom: $padding-big;
+}
+.item-detail-title{
+  font-size: $font-xxlarge !important;
+  font-weight: bold;
+  margin-top: $padding-small;
+}
+.item-info-col{
+  display: flex;
+  flex-grow: 1;
+}
+.item-description{
+  padding: $padding-big;
+}
+.item-description-text{
+  font-size: $font-regular !important;
+  margin-top: $padding-big !important;
 }
 
 @media (max-width: 768px) {
-    .item-info{
-        margin-left: $padding-small;
-    }
-    .item-picture-wrapper{
-        display: flex;
-        justify-content: center;
-    }
+	.item-info {
+		margin-left: $padding-small;
+	}
+	.item-picture-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+  .item-detail-info{
+    padding: $padding-small;
+  }
 }

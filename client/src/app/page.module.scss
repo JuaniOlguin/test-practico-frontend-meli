@@ -5,12 +5,16 @@ $color-grey-500: #666666;
 $color-grey-200: #999999;
 $color-grey-100: #EEEEEE;
 $color-white: #FFFFFF;
+$color-blue: #3483fa;
 
 //FONT SIZES
 $font-small: 12px;
 $font-medium: 14px;
+$font-regular: 16px;
 $font-large: 18px;
 $font-xlarge: 24px;
+$font-xxlarge: 28px;
+$font-xxxlarge: 46px;
 
 $padding-small: 16px;
 $padding-big: 32px;
@@ -25,11 +29,15 @@ $search-bar-height: 56px;
     colorGrey200: $color-grey-200;
     colorGrey100: $color-grey-100;
     colorWhite: $color-white;
+    colorBlue: $color-blue;
 
     fontSmall: $font-small;
     fontMedium: $font-medium;
+    fontRegular: $font-regular;
     fontLarge: $font-large;
     fontXLarge: $font-xlarge;
+    fontXXLarge: $font-xxlarge;
+    fontXXXLarge: $font-xxxlarge;
 
     searchBarHeight: $search-bar-height;
 }

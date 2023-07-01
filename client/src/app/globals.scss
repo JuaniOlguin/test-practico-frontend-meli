@@ -66,6 +66,20 @@ hr{
     }
 }
 
+.primary-big-button{
+    color: $color-white;
+    font-size: $font-xlarge;
+    background-color: $color-blue;
+    width: 100%;
+    padding: $padding-small;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition-duration: .3s;
+    &:hover{
+        background-color: darken($color: $color-blue, $amount: 5)
+    }
+}
+
 @media (max-width: 768px) {
     .search-bar{
         width: 100%;
