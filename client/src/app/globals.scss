@@ -80,10 +80,18 @@ hr{
     }
 }
 
+.not-found-container{
+    background-color: $color-white;
+    flex-grow: 1;
+    padding: $padding-big;
+    margin-top: $padding-big;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .search-bar{
         width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
         padding-left: 15px;
         input{
             min-width: 60%;

@@ -4,9 +4,17 @@
 .categories-list {
 	padding-top: 16px;
 	padding-bottom: 16px;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .category {
 	font-size: $font-medium;
+	overflow: hidden;
+   display: -webkit-box !important;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
 }
 .search-result-container {
 	background-color: $color-white;
@@ -44,6 +52,9 @@ a {
 }
 
 // ITEM DETAIL
+.item-detail-picture{
+	padding: $padding-small
+}
 .item-detail-info {
   padding-top: $padding-big;
   padding-right: $padding-big;
@@ -65,13 +76,27 @@ a {
 }
 .item-description{
   padding: $padding-big;
+	overflow-wrap: break-word !important;
 }
 .item-description-text{
   font-size: $font-regular !important;
   margin-top: $padding-big !important;
 }
 
+
+
 @media (max-width: 768px) {
+	.item-description{
+		padding: $padding-small;
+	}
+	.item-detail-picture{
+		max-height: 420px; 
+	}
+	.item-detail-row{
+		display: flex;
+		flex-direction: column;
+		flex-direction: column-reverse;
+	}
 	.item-info {
 		margin-left: $padding-small;
 	}

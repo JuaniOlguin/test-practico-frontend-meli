@@ -34,7 +34,7 @@ export default function SearchBar() {
   return (
     <div className="search-bar container-fluid">
       <div className="row w-100 justify-content-center">
-        <div className="col-12 col-md-10">
+        <div className="col-12 col-md-10 p-0">
           <div className="d-flex w-100 justify-content-center">
             <form onSubmit={handleSubmit} className="d-flex align-items-center w-100">
               <div className="me-3">

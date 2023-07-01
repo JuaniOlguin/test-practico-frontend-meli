@@ -6,12 +6,14 @@ export default function SearchResultCategories(props: any){
         <div className="d-flex text-muted categories-list">
             {
               props.categories.map((category: any, index: number) => (
-                <div key={category}>
+                <div className='d-flex align-items-center' key={category}>
                   {
-                    <p className="category mb-0 d-flex align-items-center text-center">
-                        {category}
-                        <span className='mx-2'>{index != props.categories.length - 1 ? '>' : ''}</span>
-                    </p>
+                    <div className='d-flex align-items-center text-start'>
+                      <p className="category mb-0">
+                          {category}
+                      </p>
+                      <span className='mx-2'>{index != props.categories.length - 1 ? '>' : ''}</span>
+                    </div>
                   }
                 </div>
               ))
