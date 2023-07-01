@@ -45,7 +45,7 @@ export default function SearchBar() {
                 placeholder="Nunca dejes de buscar"
                 onChange={handleInputChange}
               />
-              <button type="submit">
+              <button type="submit" aria-label="Buscar">
                 <SearchIcon />
               </button>
             </form>
