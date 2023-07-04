@@ -86,6 +86,12 @@ a {
 
 
 @media (max-width: 768px) {
+	.item-price{
+		font-size: $font-xxlarge !important;
+	}
+	.item-detail-title{
+		font-size: $font-xlarge !important;
+	}
 	.item-description{
 		padding: $padding-small;
 	}

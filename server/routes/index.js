@@ -57,7 +57,6 @@ router.get("/api/items/:id", (req, res) => {
 	axios
 		.get(`${process.env.ML_API_URL}/items/${productId}`)
 		.then((item) => {
-      console.log(item);
       axios
         .get(`${process.env.ML_API_URL}/categories/${item.data.category_id}`)
         .then(category => {
