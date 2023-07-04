@@ -91,6 +91,15 @@ a {
 }
 
 
+@media (max-width: 1000px) {
+	
+	.item-detail-row{
+		display: flex;
+		flex-direction: column;
+		flex-direction: column-reverse;
+	}
+}
+
 @media (max-width: 768px) {
 	.item-price{
 		font-size: $font-xxlarge !important;
@@ -103,11 +112,6 @@ a {
 	}
 	.item-detail-picture{
 		max-height: 420px; 
-	}
-	.item-detail-row{
-		display: flex;
-		flex-direction: column;
-		flex-direction: column-reverse;
 	}
 	.item-info {
 		margin-left: $padding-small;
