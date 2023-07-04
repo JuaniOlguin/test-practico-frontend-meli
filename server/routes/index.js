@@ -21,8 +21,8 @@ router.get("/api/items", (req, res) => {
 			}
 			const data = {
 				author: {
-					name: "",
-					lastname: "",
+					name: process.env.AUTHOR_NAME,
+					lastname: process.env.AUTHOR_LASTNAME,
 				},
 				categories: categories,
 				items: items.map((item) => {
@@ -67,9 +67,9 @@ router.get("/api/items/:id", (req, res) => {
               description = descr.data.plain_text;
               const data = {
                 author: {
-                  name: "",
-                  lastname: "",
-                },
+									name: process.env.AUTHOR_NAME,
+									lastname: process.env.AUTHOR_LASTNAME,
+								},
                 item: {
                   id: item.data.id,
                   title: item.data.title,

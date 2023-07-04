@@ -9,7 +9,7 @@ Aplicación web que permita realizar la búsqueda de distintos productos y ver s
 ### Cliente
 
  - HTML 5
- - CSS 3
+ - CSS 3 (usando SASS)
  - Bootstrap 5
  - Typescript (v5.1.3) con React (v18.2.0) y Next.js (v13.4.7) como framework para implementar Server Side Rendering
  
