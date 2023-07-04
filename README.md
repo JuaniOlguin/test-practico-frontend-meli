@@ -10,7 +10,8 @@ Aplicación web que permita realizar la búsqueda de distintos productos y ver s
 
  - HTML 5
  - CSS 3
- - Typescript (v5.1.3) con React (v18.2.0) y Next.js (v13.4.7) como framework Server Side Rendering
+ - Bootstrap 5
+ - Typescript (v5.1.3) con React (v18.2.0) y Next.js (v13.4.7) como framework para implementar Server Side Rendering
  
  ### Servidor
  
@@ -45,5 +46,14 @@ Las rutas disponibles son:
 
  - **GET SEARCH RESULTS** - http://localhost:3001/api/items?q=:query&limit=:limit
  Endpoint consumido al realizar una búsqueda, el parámetro "query" es la búsqueda ingresada y se agregó a lo solicitado por la consigna un parámetro llamado "limit", que determina la cantidad de items que devuelve una búsqueda y no limitarlo a sólo 4.
--**GET ITEM BY ID** - http://localhost:3001/api/items/:id 
+- **GET ITEM BY ID** - http://localhost:3001/api/items/:id 
 Endpoint que devuelve el detalle de un producto, haciendo uso del parámetro "id".
+
+## Reportes
+Se incluyen en el repositorio resultados de reportes (en formato PDF) realizados por medio de Lighthouse, la herramienta incluída en el navegador Google Chrome, donde se analizaron métricas como:
+
+ - Rendimiento
+ - Accesibilidad
+ - SEO
+
+Todas las pantallas cuentan con un diseño responsive desarrollado utilizando el sistema de grillas que provee Bootstrap.
