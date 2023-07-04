@@ -18,6 +18,7 @@
 }
 .search-result-container {
 	background-color: $color-white;
+	padding-bottom: $padding-big;
 }
 .search-result {
 	display: flex;
@@ -58,6 +59,7 @@ a {
 .item-detail-info {
   padding-top: $padding-big;
   padding-right: $padding-big;
+	padding-left: $padding-big;
 	flex-grow: 1;
 }
 .item-price {
@@ -83,7 +85,10 @@ a {
   font-size: $font-regular !important;
   margin-top: $padding-big !important;
 }
-
+.item-detail-row{
+	display: flex;
+	justify-content: center;
+}
 
 
 @media (max-width: 768px) {

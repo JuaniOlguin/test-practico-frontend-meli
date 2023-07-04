@@ -41,11 +41,12 @@ export default function SearchBar() {
                 <LogoMeli />
               </div>
               <input
+                id="searchBarInput"
                 type="text" 
                 placeholder="Nunca dejes de buscar"
                 onChange={handleInputChange}
               />
-              <button type="submit" aria-label="Buscar">
+              <button id="searchButton" type="submit" aria-label="Buscar">
                 <SearchIcon />
               </button>
             </form>

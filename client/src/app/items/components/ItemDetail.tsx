@@ -11,7 +11,7 @@ export default function ItemDetail(props: any){
   return(
     <div className="container-fluid">
       <div className="row item-detail-row">
-        <div className="col-12 col-md-7 p-0">
+        <div className="col-12 col-md-7 d-flex flex-grow-1 flex-column align-items-center p-0">
           <Image 
             height={680} 
             width={680}
