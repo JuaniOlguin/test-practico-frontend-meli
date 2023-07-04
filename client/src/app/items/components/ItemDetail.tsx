@@ -28,14 +28,14 @@ export default function ItemDetail(props: any){
             </p>
           </div>
         </div>
-        <div className="col-12 col-md-3 p-0 item-info-col">
+        <div className="col-12 col-md-auto p-0 item-info-col">
           <div className="item-detail-info">
             <h3 className="mb-0">{item.condition == 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} vendidos {item.free_shipping ? <FreeShipIcon /> : ''}</h3>
             <h1 className="item-detail-title">
               {item.title}
             </h1>
             <h1 className="item-price">
-              <NumericFormat value={item.price.amount.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={currencyDisplay(item.price.currency)} />
+              <NumericFormat value={item.price?.amount?.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={currencyDisplay(item.price!.currency!)} />
             </h1>
             <button type="button" className="primary-big-button">
               Comprar

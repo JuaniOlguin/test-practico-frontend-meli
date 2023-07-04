@@ -58,6 +58,7 @@ a {
 .item-detail-info {
   padding-top: $padding-big;
   padding-right: $padding-big;
+	flex-grow: 1;
 }
 .item-price {
   font-size: $font-xxxlarge !important;

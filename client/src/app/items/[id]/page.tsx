@@ -12,13 +12,13 @@ import ItemDetail from "../components/ItemDetail";
 export default function Item() {
 
   const params = usePathname();
-  const [itemId, setItemId] = useState(params.split('/')[2]);
+  const [itemId, setItemId] = useState(params?.split('/')[2]);
   const [errorMsg, setErrorMsg] = useState('');
   const [loading, setLoading] = useState(false);
   const [item, setItem] = useState<ItemElement>();
 
   useEffect(() => {
-    setItemId(params.split('/')[2]);
+    setItemId(params?.split('/')[2]);
   }, [params]);
 
   useEffect(() => {
