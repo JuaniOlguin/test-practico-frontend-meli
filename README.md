@@ -11,7 +11,8 @@ Aplicación web que permita realizar la búsqueda de distintos productos y ver s
  - HTML 5
  - CSS 3 (usando SASS)
  - Bootstrap 5
- - Typescript (v5.1.3) con React (v18.2.0) y Next.js (v13.4.7) como framework para implementar Server Side Rendering
+ - Typescript (v5.1.3) con React (v18.2.0) y Next.js (v13.4.7) como framework para implementar Server Side Rendering.
+ - Cypress (v12.16.0) para testing E2E.
  
  ### Servidor
  
@@ -48,6 +49,17 @@ Las rutas disponibles son:
  Endpoint consumido al realizar una búsqueda, el parámetro "query" es la búsqueda ingresada y se agregó a lo solicitado por la consigna un parámetro llamado "limit", que determina la cantidad de items que devuelve una búsqueda y no limitarlo a sólo 4.
 - **GET ITEM BY ID** - http://localhost:3001/api/items/:id 
 Endpoint que devuelve el detalle de un producto, haciendo uso del parámetro "id".
+
+### Testing
+
+Se definieron tests E2E para probar las funciones de búsqueda y navegación de la aplicación.
+
+Los tests definidos son:
+- Realizar una búsqueda con la barra de búsqueda vacía.
+- Realizar una búsqueda con la query "telefono".
+- Una vez realizada la búsqueda, navegar hacia el último producto de la lista de resultados.
+
+Para ejecutar el entorno de testing, posicionado en la carpeta "client" y con cliente y servidor ejecutandose, se debe correr el comando "npm run cypress". Una vez abierta la interfaz que provee Cypress, se debe seleccionar la opción "E2E testing", seleccionar el navegador y presionar la opción "Start E2E Testing". Al cargar el dashboard de Cypress, se debe seleccionar el spec "search-items-amount" para que los tests se ejecuten.
 
 ## Reportes
 Se incluyen en el repositorio resultados de reportes (en formato PDF) realizados por medio de Lighthouse, la herramienta incluída en el navegador Google Chrome, donde se analizaron métricas como:
